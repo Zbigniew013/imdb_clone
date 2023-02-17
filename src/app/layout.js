@@ -1,18 +1,21 @@
 import Header from './components/Header';
 import './globals.css';
+import Providers from './Providers';
 
 const RootLayout = ({ children }) => {
   return (
     <html lang='en'>
       <head />
       <body>
-        {/* Header  */}
-        <Header />
-        {/* Navbar  */}
+        <Providers>
+          {/* Header  */}
+          <Header />
+          {/* Navbar  */}
 
-        {/* Search Box */}
+          {/* Search Box */}
 
-        {children}
+          {children}
+        </Providers>
       </body>
     </html>
   );
