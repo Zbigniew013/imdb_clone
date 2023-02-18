@@ -11,14 +11,18 @@ async function Home({ searchParams }) {
     { next: { revalidate: 10000 } }
   );
 
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
   const data = await res.json();
 
   const results = data.results;
 
   return (
-    <h1 className='text-xl text-teal-200 '>
+    <div className='text-xl text-teal-200 '>
       <Results results={results} />
-    </h1>
+    </div>
   );
 }
 
