@@ -20,7 +20,7 @@ async function Home({ searchParams }) {
   const results = data.results;
 
   return (
-    <div className='text-xl text-teal-200 '>
+    <div>
       <Results results={results} />
     </div>
   );
